@@ -2,8 +2,21 @@ import { FiDownload } from 'react-icons/fi';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import styles from './About.module.css';
 
+const EXPERIENCE_START = new Date(2022, 6, 1); // July 2022 (month is 0-indexed)
+
+function getYearsOfExperience(from: Date = EXPERIENCE_START): number {
+  const now = new Date();
+  let years = now.getFullYear() - from.getFullYear();
+  const monthDiff = now.getMonth() - from.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < from.getDate())) {
+    years--;
+  }
+  return Math.max(0, years);
+}
+
 export default function About() {
   const ref = useScrollAnimation<HTMLElement>();
+  const yearsExperience = getYearsOfExperience();
 
   return (
     <section id="about" className={`${styles.about} section`} ref={ref}>
@@ -30,7 +43,7 @@ export default function About() {
             <div className={`${styles.bio} fade-up`}>
               <p>
                 Hey there! I'm <strong>Andrew Damas</strong> — a full-stack developer based in
-                Detroit, MI with over 3 years of experience building web applications that
+                Detroit, MI with over {yearsExperience} years of experience building web applications that
                 people actually enjoy using. I care deeply about the craft: clean code,
                 thoughtful UX, and software that scales gracefully.
               </p>
@@ -48,7 +61,7 @@ export default function About() {
 
             <div className={`${styles.highlights} fade-up`}>
               <div className={styles.highlight}>
-                <span className={styles.num}>3+</span>
+                <span className={styles.num}>{yearsExperience}+</span>
                 <span className={styles.label}>Years Experience</span>
               </div>
               {/*<div className={styles.highlight}>*/}
