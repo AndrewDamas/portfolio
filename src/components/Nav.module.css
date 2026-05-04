@@ -1,0 +1,206 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color var(--transition-slow), backdrop-filter var(--transition-slow),
+    box-shadow var(--transition-slow), border-color var(--transition-slow);
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom-color: var(--nav-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  width: 100%;
+  margin: 0;
+  padding: 0 32px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+  flex-shrink: 0;
+}
+.logo:hover {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.hireCta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--accent);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+.hireCta:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  text-decoration: none;
+}
+.iconLink:hover {
+  color: var(--accent);
+  background-color: var(--accent-bg);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+.hamburger:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Mobile drawer */
+.drawer {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  padding: 16px 24px 24px;
+  transform: translateY(-120%);
+  visibility: hidden;
+  transition: transform var(--transition-slow), visibility var(--transition-slow);
+  display: none;
+}
+
+.drawerOpen {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.drawerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.drawerLinks a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+.drawerLinks a:hover {
+  background-color: var(--accent-bg);
+  color: var(--accent);
+}
+
+.drawerSocials {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+}
+.drawerSocials a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+.drawerSocials a:hover {
+  color: var(--accent);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  top: 68px;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .drawer {
+    display: block;
+  }
+  .overlay {
+    display: block;
+  }
+  .inner {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,75 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+:root {
+  /* Light mode — warm neutrals */
+  --bg-primary: #faf7f2;
+  --bg-secondary: #f2ede4;
+  --bg-tertiary: #e8e0d4;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fdf9f5;
+
+  --text-primary: #2c2420;
+  --text-secondary: #5c4f47;
+  --text-muted: #8c7e76;
+  --text-inverse: #faf7f2;
+
+  --border-color: #ddd5c8;
+  --border-subtle: #ede6db;
+
+  --accent: #b85c38;
+  --accent-light: #d4795a;
+  --accent-muted: #f0d4c8;
+  --accent-bg: #fdf0eb;
+
+  --shadow-sm: 0 1px 3px rgba(44, 36, 32, 0.08), 0 1px 2px rgba(44, 36, 32, 0.06);
+  --shadow-md: 0 4px 12px rgba(44, 36, 32, 0.10), 0 2px 6px rgba(44, 36, 32, 0.06);
+  --shadow-lg: 0 8px 28px rgba(44, 36, 32, 0.12), 0 4px 12px rgba(44, 36, 32, 0.08);
+  --shadow-xl: 0 16px 48px rgba(44, 36, 32, 0.14), 0 8px 24px rgba(44, 36, 32, 0.08);
+
+  --nav-bg: rgba(250, 247, 242, 0.80);
+  --nav-border: rgba(221, 213, 200, 0.60);
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1e1a18;
+  --bg-secondary: #252018;
+  --bg-tertiary: #2e2820;
+  --bg-card: #2a2420;
+  --bg-card-hover: #322c28;
+
+  --text-primary: #f0e8df;
+  --text-secondary: #c4b4a8;
+  --text-muted: #8a7a70;
+  --text-inverse: #1e1a18;
+
+  --border-color: #3e3530;
+  --border-subtle: #332d28;
+
+  --accent: #d4795a;
+  --accent-light: #e8977c;
+  --accent-muted: #4a2c20;
+  --accent-bg: #2e1e18;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.30), 0 2px 6px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.36), 0 4px 12px rgba(0, 0, 0, 0.24);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.40), 0 8px 24px rgba(0, 0, 0, 0.28);
+
+  --nav-bg: rgba(30, 26, 24, 0.82);
+  --nav-border: rgba(62, 53, 48, 0.60);
+}

@@ -1,0 +1,44 @@
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 1.5px solid var(--border-color);
+  padding: 2px;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+  position: relative;
+}
+
+.track.dark {
+  background-color: var(--accent-muted);
+  border-color: var(--accent);
+}
+
+.thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transition: transform var(--transition-spring);
+  transform: translateX(0);
+}
+
+.dark .thumb {
+  transform: translateX(22px);
+}
