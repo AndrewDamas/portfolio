@@ -191,7 +191,7 @@ export default function Hero() {
   }, [initBuffers, addRipple]);
 
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('hire')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -211,7 +211,7 @@ export default function Hero() {
 
         <div className={styles.ctas}>
           <button className="btn btn-primary" onClick={scrollToProjects}>
-            View My Work <FiArrowDown size={15} />
+            Hire Me <FiArrowDown size={15} />
           </button>
 
           <a

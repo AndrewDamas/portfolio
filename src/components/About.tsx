@@ -62,7 +62,7 @@ export default function About() {
             </div>
 
             <div className={`${styles.actions} fade-up`}>
-              <a href="/resume.pdf" download className="btn btn-secondary">
+              <a href="/AndrewDamavoletesResume.pdf" download className="btn btn-secondary">
                 <FiDownload size={16} /> Download Resume
               </a>
             </div>
